@@ -1,0 +1,286 @@
+/* ================================
+   GLOBAL PAGE
+================================ */
+
+.birthday-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at 20% 20%, #42265d 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, #4a204f 0%, transparent 40%),
+    linear-gradient(135deg, #160f27, #241333, #170f28);
+  color: white;
+  isolation: isolate;
+}
+
+/* ================================
+   BACKGROUND GLOW EFFECTS
+================================ */
+
+.ambient-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-one {
+  top: -100px;
+  left: -100px;
+  background: #e879bc;
+}
+
+.glow-two {
+  bottom: -100px;
+  right: -100px;
+  background: #9565e9;
+}
+
+/* ================================
+   FLOATING HEARTS
+================================ */
+
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -10px;
+  color: rgba(255, 125, 194, 0.75);
+  text-shadow: 0 0 12px rgba(255, 100, 190, 0.5);
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================
+   WELCOME SCREEN
+================================ */
+
+.welcome-content {
+  width: 100%;
+  max-width: 600px;
+  padding: 55px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  text-align: center;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Welcome icon */
+
+.welcome-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff0fa;
+  background: linear-gradient(135deg, #f77cbd, #a779e8);
+  box-shadow: 0 0 35px rgba(239, 116, 192, 0.35);
+}
+
+/* Small heading */
+
+.small-heading {
+  color: #f5a9d4;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+/* Main title */
+
+.welcome-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.2;
+  color: #fff4fb;
+  margin-bottom: 22px;
+}
+
+.welcome-content h1 span {
+  background: linear-gradient(100deg, #ff91cb, #d6a6ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+
+.welcome-description {
+  max-width: 420px;
+  margin: 0 auto 32px;
+  color: #d0c1db;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* Main button */
+
+.surprise-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 35px;
+  background: linear-gradient(110deg, #f77cbd, #b28aff);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(228, 113, 196, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.surprise-button:hover {
+  box-shadow: 0 10px 40px rgba(228, 113, 196, 0.5);
+}
+
+/* Footer */
+
+.welcome-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 35px;
+  color: #c6a8d3;
+  font-size: 12px;
+}
+
+.welcome-footer svg {
+  color: #f49bce;
+}
+
+/* ================================
+   SURPRISE SCREEN
+================================ */
+
+.surprise-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Back button */
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #f8d9ed;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 600px) {
+  .birthday-page {
+    padding: 25px 15px;
+  }
+
+  .welcome-content {
+    padding: 45px 22px;
+    border-radius: 20px;
+  }
+
+  .welcome-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .small-heading {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .welcome-description {
+    font-size: 13px;
+  }
+
+  .surprise-button {
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+
+  .ambient-glow {
+    width: 250px;
+    height: 250px;
+    filter: blur(75px);
+  }
+
+  .surprise-content {
+    gap: 30px;
+  }
+}
+
+/* Smaller mobile screens */
+
+@media (max-width: 360px) {
+  .welcome-content {
+    padding: 35px 17px;
+  }
+
+  .welcome-content h1 {
+    font-size: 36px;
+  }
+
+  .small-heading {
+    letter-spacing: 2px;
+  }
+}

@@ -1,0 +1,50 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   PAGE DEFAULTS
+================================ */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: "Playfair Display", serif;
+  background: #160f27;
+}
+
+/* ================================
+   BUTTON DEFAULTS
+================================ */
+
+button {
+  font-family: inherit;
+}
+
+/* ================================
+   IMAGE DEFAULTS
+================================ */
+
+img {
+  max-width: 100%;
+  display: block;
+}
