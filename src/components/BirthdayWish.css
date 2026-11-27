@@ -1,0 +1,317 @@
+.birthday-wish-section {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 650px;
+  margin: 100px auto 40px;
+  padding: 70px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 30px;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(211, 91, 170, 0.2),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(132, 91, 211, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #211331, #321b42, #1c1530);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* SECRET SURPRISE SCREEN */
+
+.secret-surprise {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.secret-gift-icon {
+  width: 115px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff9ed2;
+  background: rgba(255, 158, 210, 0.1);
+  border: 1px solid rgba(255, 158, 210, 0.25);
+  border-radius: 50%;
+  box-shadow: 0 0 45px rgba(255, 110, 180, 0.2);
+  margin-bottom: 30px;
+}
+
+.secret-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ffaddb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.secret-surprise h2 {
+  color: #fff1fa;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 18px;
+}
+
+.secret-surprise p {
+  max-width: 390px;
+  color: #d7c4df;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+.reveal-wish-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(135deg, #f06cae, #bd68d9);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(240, 108, 174, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.reveal-wish-button:hover {
+  box-shadow: 0 10px 40px rgba(240, 108, 174, 0.5);
+}
+
+.secret-footer {
+  color: #bca5c9;
+  font-size: 12px;
+  margin-top: 35px;
+  letter-spacing: 0.5px;
+}
+
+/* REVEALED BIRTHDAY WISH */
+
+.wish-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.wish-stars {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.wish-star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 8px #fff,
+    0 0 15px #ff9ed2;
+}
+
+.wish-icon {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff9bcf;
+  background: rgba(255, 155, 207, 0.12);
+  border: 1px solid rgba(255, 155, 207, 0.3);
+  border-radius: 50%;
+  margin-bottom: 25px;
+  box-shadow: 0 0 30px rgba(255, 120, 190, 0.2);
+}
+
+.wish-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffb0d9;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.wish-title {
+  color: #fff3fa;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(35px, 6vw, 65px);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.wish-title span {
+  display: block;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #ff9bcf, #d6a2ff, #ffb5d9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wish-divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffaad5;
+  margin-bottom: 30px;
+}
+
+.wish-divider span {
+  width: 65px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f29bc9);
+}
+
+.wish-divider span:last-child {
+  transform: rotate(180deg);
+}
+
+.wish-message {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.wish-message p {
+  color: #e8d8ed;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.wish-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #ffaad5;
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+/* GO BACK BUTTON */
+
+.wish-back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 35px;
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 174, 216, 0.4);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffd4eb;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.wish-back-button:hover {
+  background: rgba(255, 155, 207, 0.15);
+  border-color: #ff9bcf;
+}
+
+/* TABLET */
+
+@media (max-width: 768px) {
+  .birthday-wish-section {
+    min-height: 600px;
+    padding: 55px 20px;
+    margin-top: 75px;
+  }
+
+  .wish-message p {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .birthday-wish-section {
+    min-height: 580px;
+    padding: 45px 15px;
+    margin-top: 55px;
+    border-radius: 22px;
+  }
+
+  .secret-gift-icon {
+    width: 95px;
+    height: 95px;
+  }
+
+  .secret-surprise p {
+    font-size: 13px;
+  }
+
+  .secret-label,
+  .wish-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    gap: 7px;
+  }
+
+  .wish-content {
+    padding: 20px 5px;
+  }
+
+  .wish-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .wish-message {
+    gap: 10px;
+  }
+
+  .wish-message p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .wish-footer {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .wish-back-button {
+    margin-top: 28px;
+  }
+}

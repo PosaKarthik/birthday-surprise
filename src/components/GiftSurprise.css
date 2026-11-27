@@ -1,0 +1,331 @@
+.gift-section {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 100px auto 80px;
+  padding: 40px 24px 55px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Heading */
+
+.gift-heading {
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+.gift-heading svg {
+  color: #ff9ecb;
+  margin-bottom: 15px;
+}
+
+.gift-heading > p {
+  color: #e9a9d0;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.gift-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 600;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #fff, #ffc2e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gift-heading span {
+  color: #d8c2dc;
+  font-size: 14px;
+}
+
+/* Gift stage */
+
+.gift-stage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+/* Glow behind gift */
+
+.gift-glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 143, 189, 0.35),
+    rgba(189, 139, 255, 0.15),
+    transparent 70%
+  );
+  filter: blur(12px);
+  z-index: -1;
+}
+
+/* Gift box */
+
+.gift-box {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+  font-family: inherit;
+}
+
+/* Gift body */
+
+.gift-body {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 170px;
+  height: 125px;
+  border-radius: 8px 8px 12px 12px;
+  background: linear-gradient(135deg, #ff91bf, #e45b9c, #bb65d9);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    inset 0 3px 8px rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Vertical ribbon */
+
+.gift-ribbon {
+  position: absolute;
+  width: 27px;
+  height: 100%;
+  background: linear-gradient(90deg, #ffe5a8, #fff2ce, #ffd98c);
+  box-shadow: 0 0 12px rgba(255, 225, 160, 0.3);
+}
+
+/* Horizontal ribbon */
+
+.gift-ribbon-horizontal {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(180deg, #ffe5a8, #fff2ce, #ffd98c);
+}
+
+/* Gift icon */
+
+.gift-icon {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Gift lid */
+
+.gift-lid {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 190px;
+  height: 43px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffacd0, #f17caf, #d477e8);
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.25),
+    inset 0 3px 7px rgba(255, 255, 255, 0.3);
+  z-index: 3;
+  transform-origin: left bottom;
+  transition:
+    transform 0.8s ease,
+    top 0.8s ease,
+    left 0.8s ease;
+}
+
+/* Bow */
+
+.gift-bow {
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 35px;
+}
+
+.gift-bow span {
+  position: absolute;
+  width: 35px;
+  height: 27px;
+  border: 7px solid #ffe8b4;
+  border-radius: 50% 50% 10% 50%;
+}
+
+.gift-bow span:first-child {
+  left: 0;
+  transform: rotate(30deg);
+}
+
+.gift-bow span:last-child {
+  right: 0;
+  transform: scaleX(-1) rotate(30deg);
+}
+
+/* Opened state */
+
+.gift-box.opened .gift-lid {
+  top: -35px;
+  left: 30px;
+  transform: rotate(-30deg);
+}
+
+.gift-box.opened .gift-body {
+  box-shadow:
+    0 0 30px rgba(255, 143, 189, 0.4),
+    inset 0 3px 8px rgba(255, 255, 255, 0.25);
+}
+
+/* Confetti */
+
+.gift-confetti {
+  position: absolute;
+  bottom: 100px;
+  font-size: 22px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Instructions */
+
+.gift-instruction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #ffadd1;
+  margin-top: 5px;
+}
+
+.gift-instruction p {
+  color: #d8c2dc;
+  font-size: 13px;
+}
+
+/* Revealed message */
+
+.gift-message {
+  max-width: 480px;
+  margin: 15px auto 0;
+  padding: 28px 25px;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 158, 203, 0.08)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  color: #fff;
+}
+
+.gift-message > svg {
+  color: #ffd98c;
+  margin-bottom: 15px;
+}
+
+.gift-message h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: #ffe3f2;
+  margin-bottom: 12px;
+}
+
+.gift-message p {
+  color: #e0cde4;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.gift-message span {
+  color: #ffadd1;
+  font-size: 13px;
+}
+
+/* Action button */
+
+.gift-action-button {
+  margin-top: 28px;
+  padding: 13px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  background: linear-gradient(135deg, #f28ab9, #bd82e8);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(225, 112, 181, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.gift-action-button:hover {
+  box-shadow: 0 10px 30px rgba(225, 112, 181, 0.5);
+}
+
+/* Keyboard accessibility */
+
+.gift-box:focus-visible,
+.gift-action-button:focus-visible {
+  outline: 2px solid #ffe3f2;
+  outline-offset: 5px;
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+  .gift-section {
+    margin-top: 55px;
+    padding: 25px 18px 45px;
+  }
+
+  .gift-heading {
+    margin-bottom: 30px;
+  }
+
+  .gift-heading > p {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .gift-heading span {
+    font-size: 12px;
+  }
+
+  .gift-stage {
+    height: 260px;
+  }
+
+  .gift-message {
+    padding: 24px 18px;
+  }
+
+  .gift-message h3 {
+    font-size: 21px;
+  }
+
+  .gift-message p {
+    font-size: 13px;
+  }
+}

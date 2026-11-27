@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from "motion/react";
 import { Heart, Sparkles, Gift, ArrowLeft } from "lucide-react";
 
 import LetterReveal from "./components/LetterReveal";
+import MemoryGallery from "./components/MemoryGallery";
+import MemoryTimeline from "./components/MemoryTimeline";
+import ReasonsSection from "./components/ReasonsSection";
+import GiftSurprise from "./components/GiftSurprise";
+import BirthdayWish from "./components/BirthdayWish";
+import LoveQuiz from "./components/LoveQuiz";
 import "./App.css";
 
 const floatingHearts = Array.from({ length: 18 }, (_, i) => ({
@@ -116,6 +122,12 @@ function App() {
               transition={{ duration: 0.6 }}
             >
               <LetterReveal />
+              <MemoryGallery />
+              <MemoryTimeline />
+              <ReasonsSection />
+              <GiftSurprise />
+              <LoveQuiz />
+              <BirthdayWish />
 
               <motion.button
                 className="back-button"

@@ -1,0 +1,200 @@
+.reasons-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 100px auto 80px;
+  padding: 40px 24px;
+}
+
+/* Heading */
+
+.reasons-heading {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 55px;
+}
+
+.reasons-heading svg {
+  color: #ff9ecb;
+  margin-bottom: 15px;
+}
+
+.reasons-heading > p {
+  color: #e9a9d0;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.reasons-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 600;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #fff, #ffc2e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reasons-heading span {
+  color: #d8c2dc;
+  font-size: 14px;
+}
+
+/* Cards grid */
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Individual card */
+
+.reason-card {
+  width: 100%;
+  min-height: 220px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 158, 203, 0.07)
+  );
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  font-family: inherit;
+  perspective: 1000px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.reason-card:hover {
+  border-color: rgba(255, 158, 203, 0.55);
+  box-shadow: 0 15px 40px rgba(255, 143, 189, 0.15);
+}
+
+.reason-card:focus-visible {
+  outline: 2px solid #ffadd1;
+  outline-offset: 4px;
+}
+
+/* Card content */
+
+.reason-content {
+  min-height: 220px;
+  width: 100%;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.reason-emoji {
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+
+.reason-content h3 {
+  color: #ffe3f2;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+}
+
+.reason-content p {
+  color: #d6c3dc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.reason-content > span:last-child {
+  color: #ffadd1;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+/* Revealed card */
+
+.reason-card.revealed {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 158, 203, 0.17),
+    rgba(189, 139, 255, 0.13)
+  );
+  border-color: rgba(255, 158, 203, 0.4);
+}
+
+.revealed-content > svg {
+  color: #ff9ecb;
+  margin-bottom: 5px;
+}
+
+.revealed-content p {
+  color: #f0dcec;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .reasons-section {
+    margin-top: 70px;
+    padding: 30px 20px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .reason-card,
+  .reason-content {
+    min-height: 210px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+  .reasons-section {
+    margin-top: 55px;
+    padding: 25px 18px;
+  }
+
+  .reasons-heading {
+    margin-bottom: 35px;
+  }
+
+  .reasons-heading > p {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .reasons-heading span {
+    font-size: 12px;
+  }
+
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .reason-card,
+  .reason-content {
+    min-height: 190px;
+  }
+
+  .reason-content h3 {
+    font-size: 20px;
+  }
+
+  .reason-content p {
+    font-size: 13px;
+  }
+}
